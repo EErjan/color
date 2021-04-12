@@ -1,0 +1,58 @@
+@import "../abstracts/variables";
+
+@media (max-width: 1450px) {
+  .my-container {
+    max-width: 1230px;
+  }
+}
+
+@media (max-width: 1250px) {
+
+  .my-container {
+    max-width: 991px;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .my-container {
+    max-width: 768px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hamburger-menu {
+    display: block;
+    right: 30px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .my-container {
+    padding: 0 20px;
+  }
+
+  .hamburger-menu {
+    right: 20px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+
+  .my-container {
+    padding: 0 15px;
+  }
+
+  .mobile__menu {
+    max-width: 70%;
+  }
+
+}
+
