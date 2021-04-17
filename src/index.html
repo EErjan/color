@@ -15,8 +15,31 @@
 @@include('layouts/_mobile-menu.html')
 
 @@include('layouts/_header.html')
+<div class="cursor"></div>
+<div class="cursor-lazy"></div>
 
+<a href="" style="margin: 50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dignissimos eligendi enim impedit magni nihil nisi rem repudiandae ut voluptatem.</a>
 
+<script>
+
+    "use strict";
+    (function () {
+        var cursor = document.querySelector('.cursor');
+        var cursorLazy = document.querySelector('.cursor-lazy');
+        var links = document.querySelectorAll('a');
+
+        var editCursor = function editCursor(event) {
+            cursor.style.left = event.clientX + 'px';
+            cursor.style.top = event.clientY + 'px';
+            cursorLazy.style.left = event.clientX + 'px';
+            cursorLazy.style.top = event.clientY + 'px';
+
+        };
+
+        window.addEventListener('mousemove', editCursor);
+
+    })();
+</script>
 
 @@include('layouts/_footer.html')
 
