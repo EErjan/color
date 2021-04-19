@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Montserrat-Regular";
   font-display: swap;
-  src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Montserrat-Medium";
   font-display: swap;
-  src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Montserrat-Bold";
   font-display: swap;
-  src: url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Gilroy-Black.woff") format("woff"), url("../fonts/Gilroy-Black.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -219,9 +219,6 @@ ul li {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  -webkit-transition: .2s ease;
-  -o-transition: .2s ease;
-  transition: .2s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,15 +231,24 @@ ul li {
   padding: 50px;
 }
 
+.mobile-nav__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
 .mobile-nav .hamburger-menu {
-  position: absolute;
-  top: 30px;
-  right: 120px;
-  margin-left: auto;
   margin-bottom: 50px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -251,6 +257,8 @@ ul li {
 .mobile-nav ul {
   position: relative;
   list-style: none;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mobile-nav a {
@@ -360,8 +368,8 @@ body {
 .hero__banner-heading {
   max-width: 600px;
   font-size: 70px;
-  font-family: "Monsterrat-Black", sans-serif;
-  font-weight: 600;
+  font-family: "Monsterrat-Bold", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -440,47 +448,86 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 72px;
-  font-family: "Montserrat-Black", sans-serif;
+  font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.section__body {
+  margin-top: 50px;
+}
+
+.photosession__wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .photosession__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 60%;
+  max-width: 53%;
+  width: 100%;
+  position: relative;
+  margin-top: -150px;
+}
+
+.photosession__item:first-child {
+  margin-top: 0;
 }
 
 .photosession__item-left {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  margin-right: auto;
+  padding-left: 40px;
 }
 
 .photosession__item-left .photosession__item-title {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg) translateX(7%);
+      -ms-transform: rotate(-90deg) translateX(7%);
+          transform: rotate(-90deg) translateX(7%);
+  top: 50%;
+  left: -100px;
+}
+
+.photosession__item-left .photosession__item-photo {
+  margin-left: auto;
 }
 
 .photosession__item-right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  margin-left: auto;
+  padding-right: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .photosession__item-right .photosession__item-title {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(90deg) translateX(7%);
+      -ms-transform: rotate(90deg) translateX(7%);
+          transform: rotate(90deg) translateX(7%);
+  top: 50%;
+  right: -100px;
+}
+
+.photosession__item-right .photosession__item-photo {
+  margin-right: auto;
+}
+
+.photosession__item-title {
+  position: absolute;
+  text-align: center;
 }
 
 .photosession__item-photo {
   max-width: 570px;
   width: 100%;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .photosession__item-photo img {

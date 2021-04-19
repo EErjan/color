@@ -50,7 +50,7 @@ AOS.init();
 
 $(document).ready(function(){
     $("a").hover(function(){
-            $('.cursor').css("transform", "scale(2) translate(-25%, -25%)");
+            $('.cursor').css("transform", "scale(3) translate(-15%, -15%)");
         },
         function(){
             $('.cursor').css("transform", "scale(1) translate(-50%, -50%)");
