@@ -10,7 +10,7 @@
 // Mobile menu start
 
 .hamburger-menu {
-  z-index: 2;
+  //z-index: 2;
   position: relative;
   cursor: pointer;
 }
@@ -80,15 +80,29 @@
   background: $main-color;
   position: fixed;
   top: 0;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   text-align: center;
   transition: .2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+
+  .hamburger-menu {
+    position: absolute;
+    top: 30px;
+    right: 120px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    display: inline-flex;
+    justify-content: flex-end;
+
+  }
 
   ul {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     list-style: none;
   }
 
@@ -115,32 +129,206 @@
 }
 
 body {
-  //cursor: none!important;
-  //position: relative;
+  position: relative;
+  z-index: 1;
+
 }
 
-
 .cursor {
-  width: 10px;
-  height: 10px;
+
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
+  background: $white;
+  //border: 2px solid $white;
   transform: translate3d(-50%, -50%, 0);
   top: 0;
   left: 0;
-  background-color: white;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  transition: 0.1s ease-out;
+  z-index: 999;
+
+  &-main {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    //background: $white;
+    border: 2px solid transparent;
+    transform: translate3d(-50%, -50%, 0);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: 0.1s ease-out;
+  }
+
 
   &-lazy {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid white;
-    position: absolute;
+    border: 2px solid transparent;
+    position: fixed;
     transform: translate3d(-50%, -50%, 0);
     top: 0;
     left: 0;
     transition: 0.1s ease-out;
+    display: none;
+
+
   }
 }
 
 // Mobile menu end
+
+
+.hero__banner {
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: calc(100vh - 154px);
+  }
+
+  &-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $white;
+  }
+
+  &-heading {
+    max-width: 600px;
+    font-size: 70px;
+    font-family: "Monsterrat-Black", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  &-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .main-btn {
+    margin-right: 44px;
+  }
+
+  &-link {
+    font-size: 20px;
+    .fa {
+      margin-right: 10px;
+    }
+  }
+
+  &-photo {
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &-bg {
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.section {
+  color: $white;
+  padding: 100px 0;
+
+  &__top {
+
+  }
+
+  &__title {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 72px;
+    font-family: "Montserrat-Black", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__body {
+
+  }
+}
+
+// Photosession
+
+.photosession {
+  &__wrap {
+
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+
+    &-left {
+      justify-content: flex-start;
+
+      .photosession__item-title {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &-right {
+      justify-content: flex-end;
+
+      .photosession__item-title {
+        transform: rotate(+90deg);
+      }
+    }
+
+    &-title {
+
+    }
+
+    &-photo {
+
+      max-width: 570px;
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-title {
+
+    }
+  }
+}

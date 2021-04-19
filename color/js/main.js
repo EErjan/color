@@ -27,3 +27,35 @@ try {
 AOS.init();
 
 
+"use strict";
+(function () {
+    var cursorMain = document.querySelector('.cursor-main');
+    var cursor = document.querySelector('.cursor');
+    var cursorLazy = document.querySelector('.cursor-lazy');
+
+    var editCursor = function editCursor(event) {
+        cursorMain.style.left = event.clientX + 'px';
+        cursorMain.style.top = event.clientY + 'px';
+        cursor.style.left = event.clientX + 'px';
+        cursor.style.top = event.clientY + 'px';
+        cursorLazy.style.left = event.clientX + 'px';
+        cursorLazy.style.top = event.clientY + 'px';
+
+    };
+
+    window.addEventListener('mousemove', editCursor);
+
+
+})();
+
+$(document).ready(function(){
+    $("a").hover(function(){
+            $('.cursor').css("transform", "scale(2) translate(-25%, -25%)");
+        },
+        function(){
+            $('.cursor').css("transform", "scale(1) translate(-50%, -50%)");
+        });
+});
+
+// Button
+

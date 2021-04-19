@@ -15,31 +15,65 @@
 @@include('layouts/_mobile-menu.html')
 
 @@include('layouts/_header.html')
+<div class="cursor-main"></div>
 <div class="cursor"></div>
 <div class="cursor-lazy"></div>
 
-<a href="" style="margin: 50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dignissimos eligendi enim impedit magni nihil nisi rem repudiandae ut voluptatem.</a>
+<div class="hero__banner">
+    <div class="my-container">
+        <div class="hero__banner-wrap">
+            <div class="hero__banner-content">
+                <h1 class="hero__banner-heading">
+                    Модульная Фотостудия в Ташкенте
+                </h1>
 
-<script>
+                <div class="hero__banner-text">
+                    Студия основана на модульных системах фонов, все фоны были собраны в ручную.
+                    Тем самым передаёт оригинальную атмосферу на фотографиях
+                </div>
 
-    "use strict";
-    (function () {
-        var cursor = document.querySelector('.cursor');
-        var cursorLazy = document.querySelector('.cursor-lazy');
-        var links = document.querySelectorAll('a');
+                <div class="hero__banner-flex">
+                    <a href="#!" class="main-btn">Записаться</a>
+                    <a class="hero__banner-link">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        Порт фолио</a>
+                </div>
+            </div>
 
-        var editCursor = function editCursor(event) {
-            cursor.style.left = event.clientX + 'px';
-            cursor.style.top = event.clientY + 'px';
-            cursorLazy.style.left = event.clientX + 'px';
-            cursorLazy.style.top = event.clientY + 'px';
+            <div class="hero__banner-photo parallax-js">
+                <img src="img/svg/logo-detail.svg" class="hero__banner-bg" alt="">
+                <img src="img/canon.png" class="hero__banner-img layer" data-depth="0.03" alt="">
+            </div>
 
-        };
+        </div>
+    </div>
+</div>
 
-        window.addEventListener('mousemove', editCursor);
+<div class="my-container">
+    <section class="section photosession">
+        <div class="section__top">
+            <h2 class="section__title">ФотосессиИ в стилях</h2>
+        </div>
 
-    })();
-</script>
+        <div class="section__body">
+            <div class="photosession__wrap">
+                <div class="photosession__item photosession__item-left">
+                    <h3 class="photosession__item-title">Портретная съёмка</h3>
+                    <div class="photosession__item-photo">
+                        <img src="img/photosession-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="photosession__item photosession__item-right">
+                    <h3 class="photosession__item-title">Семейная съёмка</h3>
+                    <div class="photosession__item-photo">
+                        <img src="img/photosession-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
 
 @@include('layouts/_footer.html')
 
@@ -47,6 +81,16 @@
 
 
 <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        let $scene = $('.parallax-js').parallax({
+            scalarX: 100,
+            scalarY: 100,
+        });
+    });
+
+</script>
 
 </body>
 

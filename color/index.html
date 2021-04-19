@@ -21,12 +21,28 @@
 </head>
 <body class="violet-bg">
 
+<div class="mobile-nav hide">
 
+    <div class="mobile-nav__inner">
+        <a class="hamburger-menu">
+            <div class="bar"></div>
+        </a>
+        <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">menu</a></li>
+            <li><a href="">faqs</a></li>
+            <li><a href="">contact</a></li>
+
+        </ul>
+    </div>
+
+
+</div>
 
 <header class="header">
     <div class="my-container">
         <div class="header__wrap">
-            <a href="#!" class="logo">
+            <a href="index.html" class="logo">
                 <svg width="169" height="54" viewBox="0 0 169 54" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M44.8671 11.2097C53.8607 11.2097 61.151 18.4687 61.151 27.4232C61.151 36.3773 53.8603 43.6363 44.8671 43.6363C35.8736 43.6363 28.5833 36.3773 28.5833 27.4232C28.5833 18.4687 35.8736 11.2097 44.8671 11.2097ZM44.8671 17.2095C50.5326 17.2095 55.1254 21.7823 55.1254 27.4232C55.1254 33.0637 50.5326 37.6369 44.8671 37.6369C39.2017 37.6369 34.6092 33.064 34.6092 27.4232C34.6092 21.7823 39.2017 17.2095 44.8671 17.2095ZM16.2839 11.2097C20.735 11.2097 24.7683 12.9884 27.7073 15.8704C26.4681 17.6913 25.5145 19.7203 24.9086 21.8933C23.0827 19.0754 19.9025 17.2095 16.2839 17.2095C10.6184 17.2095 6.02598 21.7823 6.02598 27.4232C6.02598 33.0637 10.6184 37.6369 16.2839 37.6369C19.9025 37.6369 23.0827 35.771 24.9086 32.9531C25.5145 35.126 26.4681 37.1554 27.7073 38.976C24.7679 41.858 20.7347 43.6367 16.2839 43.6367C7.29035 43.6367 0 36.3776 0 27.4235C0 18.469 7.29035 11.21 16.2839 11.21V11.2097ZM86.9495 43.6363H71.5621H71.3057H65.5587V11.2097H71.5621V37.659H84.0443C84.8035 39.7643 85.781 41.7652 86.9495 43.6367V43.6363ZM162.267 23.1677C162.267 24.8717 161.785 26.1937 160.821 27.1336C159.857 28.0737 158.45 28.5434 156.599 28.5434H151.577V17.7914H156.599C158.45 17.7914 159.857 18.254 160.821 19.1797C161.785 20.105 162.267 21.4346 162.267 23.1677ZM169 42.8203L163.028 32.9058C164.778 32.0247 166.128 30.7543 167.079 29.0942C168.03 27.4351 168.506 25.4589 168.506 23.1677C168.506 20.8762 168.036 18.8931 167.098 17.2187C166.16 15.5441 164.822 14.2515 163.085 13.3414C161.347 12.4309 159.3 11.9752 156.941 11.9752H145.415V42.8206H151.577V34.2281H156.941H157.246L162.381 42.8206H169V42.8203ZM113.879 0C128.857 0 140.999 12.0898 140.999 27.0028C140.999 41.7688 129.095 53.7642 114.321 53.9999C123.529 53.7661 130.921 46.2611 130.921 37.0371C130.921 27.6652 123.291 20.0684 113.879 20.0684C104.467 20.0684 96.8362 27.6656 96.8362 37.0371C96.8362 46.2611 104.228 53.7661 113.436 53.9999C98.6625 53.7642 86.7584 41.7685 86.7584 27.0028C86.7584 12.0898 98.9009 0 113.879 0L113.879 0Z"
@@ -42,54 +58,74 @@
 
             </div>
 
-            <div class="hamburger-menu">
+            <a class="hamburger-menu">
                 <div class="bar"></div>
-            </div>
+            </a>
 
         </div>
     </div>
 </header>
 
-<div class="mobile-nav hide">
-    <ul>
-        <li><a href="">about</a></li>
-        <li><a href="">menu</a></li>
-        <li><a href="">faqs</a></li>
-        <li><a href="">contact</a></li>
 
-    </ul>
-
-</div>
-
-<a href=""></a>
-
-
-
+<div class="cursor-main"></div>
 <div class="cursor"></div>
 <div class="cursor-lazy"></div>
 
-<a href="" style="margin: 50px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dignissimos eligendi enim impedit magni nihil nisi rem repudiandae ut voluptatem.</a>
+<div class="hero__banner">
+    <div class="my-container">
+        <div class="hero__banner-wrap">
+            <div class="hero__banner-content">
+                <h1 class="hero__banner-heading">
+                    Модульная Фотостудия в Ташкенте
+                </h1>
 
-<script>
+                <div class="hero__banner-text">
+                    Студия основана на модульных системах фонов, все фоны были собраны в ручную.
+                    Тем самым передаёт оригинальную атмосферу на фотографиях
+                </div>
 
-    "use strict";
-    (function () {
-        var cursor = document.querySelector('.cursor');
-        var cursorLazy = document.querySelector('.cursor-lazy');
-        var links = document.querySelectorAll('a');
+                <div class="hero__banner-flex">
+                    <a href="#!" class="main-btn">Записаться</a>
+                    <a class="hero__banner-link">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        Порт фолио</a>
+                </div>
+            </div>
 
-        var editCursor = function editCursor(event) {
-            cursor.style.left = event.clientX + 'px';
-            cursor.style.top = event.clientY + 'px';
-            cursorLazy.style.left = event.clientX + 'px';
-            cursorLazy.style.top = event.clientY + 'px';
+            <div class="hero__banner-photo parallax-js">
+                <img src="img/svg/logo-detail.svg" class="hero__banner-bg" alt="">
+                <img src="img/canon.png" class="hero__banner-img layer" data-depth="0.03" alt="">
+            </div>
 
-        };
+        </div>
+    </div>
+</div>
 
-        window.addEventListener('mousemove', editCursor);
+<div class="my-container">
+    <section class="section photosession">
+        <div class="section__top">
+            <h2 class="section__title">ФотосессиИ в стилях</h2>
+        </div>
 
-    })();
-</script>
+        <div class="section__body">
+            <div class="photosession__wrap">
+                <div class="photosession__item photosession__item-left">
+                    <h3 class="photosession__item-title">Портретная съёмка</h3>
+                    <div class="photosession__item-photo">
+                        <img src="img/photosession-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="photosession__item photosession__item-right">
+                    <h3 class="photosession__item-title">Семейная съёмка</h3>
+                    <div class="photosession__item-photo">
+                        <img src="img/photosession-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
 
 
 
@@ -98,12 +134,23 @@
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="libs/inputMask.min.js"></script>
 <script src="libs/aos/aos.js"></script>
+<script src="libs/parallax/jquery.parallax.min.js"></script>
 <script src="js/main.js"></script>
 
 
 
 
 <script src="libs/owlcarousel/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        let $scene = $('.parallax-js').parallax({
+            scalarX: 100,
+            scalarY: 100,
+        });
+    });
+
+</script>
 
 </body>
 
