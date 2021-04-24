@@ -84,19 +84,23 @@
   width: 100vw;
   height: 100vh;
   text-align: center;
-  transition: .2s ease;
+  //transition: .2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px;
 
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 30px 0;
+  }
+
   .hamburger-menu {
-    position: absolute;
-    top: 30px;
-    right: 120px;
-    margin-left: auto;
     margin-bottom: 50px;
-    display: inline-flex;
+    display: flex;
     justify-content: flex-end;
 
   }
@@ -104,6 +108,8 @@
   ul {
     position: relative;
     list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   a {
@@ -205,8 +211,8 @@ body {
   &-heading {
     max-width: 600px;
     font-size: 70px;
-    font-family: "Monsterrat-Black", sans-serif;
-    font-weight: 600;
+    font-family: "Monsterrat-Bold", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
   }
 
@@ -275,13 +281,13 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 72px;
-    font-family: "Montserrat-Black", sans-serif;
+    font-family: "Montserrat-Bold", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
   }
 
   &__body {
-
+    margin-top: 50px;
   }
 }
 
@@ -289,46 +295,72 @@ body {
 
 .photosession {
   &__wrap {
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   &__item {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 60%;
+    max-width: 53%;
+    width: 100%;
+    position: relative;
+    margin-top: -150px;
+
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     &-left {
-      justify-content: flex-start;
+      margin-right: auto;
+      padding-left: 40px;
 
       .photosession__item-title {
-        transform: rotate(-90deg);
+        transform: rotate(-90deg) translateX(+7%);
+        top: 50%;
+        left: -100px;
       }
+
+      .photosession__item-photo {
+        margin-left: auto;
+      }
+
     }
 
     &-right {
-      justify-content: flex-end;
+      margin-left: auto;
+      padding-right: 40px;
+      position: relative;
+      z-index: 2;
 
       .photosession__item-title {
-        transform: rotate(+90deg);
+        transform: rotate(+90deg) translateX(+7%);
+        top: 50%;
+        right: -100px;
       }
+
+      .photosession__item-photo {
+        margin-right: auto;
+      }
+
     }
 
     &-title {
-
+      position: absolute;
+      text-align: center;
     }
 
     &-photo {
-
       max-width: 570px;
       width: 100%;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
       img {
         width: 100%;
         object-fit: contain;
       }
-    }
-
-    &-title {
-
     }
   }
 }
