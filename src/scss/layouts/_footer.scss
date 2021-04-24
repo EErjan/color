@@ -1,1 +1,62 @@
 @import "../abstracts/variables";
+
+.footer {
+  background-color: #000;
+  &__wrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  &__logo {
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+
+  .copyright {
+    h5 {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    margin: 15px 30px 15px 0;
+    font-size: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__contacts {
+    display: block;
+
+    &-item {
+      display: block;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .fa {
+        text-align: center;
+        min-width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__socials {
+    &-item {
+      font-size: 20px;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
