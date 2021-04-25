@@ -68,5 +68,10 @@ ul li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #1749A5 0%, #113375 100%);
+  background: $main-color;
+}
+
+.bold-text {
+  font-family: "Montserrat-Black", sans-serif;
+  font-weight: bold;
 }

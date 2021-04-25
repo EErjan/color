@@ -14,10 +14,6 @@
     color: $main-color;
   }
 
-  .cursor {
-    display: none;
-  }
-
   background-color: $white;
   color: $main-color;
 
@@ -78,6 +74,61 @@
         color: $white;
       }
     }
+  }
+
+}
+
+.pink-bg {
+  background-color: #FFDFE0;
+  color: $main-color;
+
+  .main-btn {
+    border-color: $main-color;
+    color: $main-color;
+  }
+
+  .logo {
+    path {
+      fill: $main-color;
+    }
+  }
+
+  .header__border {
+    border-color: $main-color;
+  }
+
+  .mobile-nav__inner {
+    .bar {
+      background: transparent;
+
+      &::before {
+        background: $white;
+      }
+
+      &::after {
+        background: $white;
+      }
+    }
+  }
+
+  .bar {
+    background: $main-color;
+
+    &::before {
+      background: $main-color;
+    }
+
+    &::after {
+      background: $main-color;
+    }
+  }
+
+  .hero__banner {
+    color: $main-color;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: $main-color;
   }
 
 }
@@ -216,56 +267,7 @@ body {
 
 }
 
-.cursor {
-
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: fixed;
-  background: $white;
-  //border: 2px solid $white;
-  transform: translate3d(-50%, -50%, 0);
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  transition: 0.1s ease-out;
-  z-index: 999;
-
-  &-main {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    position: fixed;
-    //background: $white;
-    border: 2px solid transparent;
-    transform: translate3d(-50%, -50%, 0);
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition: 0.1s ease-out;
-  }
-
-
-  &-lazy {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    position: fixed;
-    transform: translate3d(-50%, -50%, 0);
-    top: 0;
-    left: 0;
-    transition: 0.1s ease-out;
-    display: none;
-
-
-  }
-}
-
 // Mobile menu end
-
 
 .hero {
   &__banner {
@@ -975,6 +977,243 @@ body {
 }
 
 
+// Bantik page
+
+.category-bantik {
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &:hover {
+      .category-bantik__photo {
+
+      }
+    }
 
 
+    &:last-child {
+      margin-bottom: 0;
+    }
 
+    &.right {
+      .category-bantik__photo {
+        order: 2;
+      }
+
+      .category-bantik__content {
+        order: 1;
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    max-width: 51%;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: .5s;
+    }
+  }
+
+  &__content {
+    padding: 60px;
+    flex: 0 0 1;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-family: "Montserrat-Black", sans-serif;
+  }
+}
+
+// Products
+
+.product {
+
+  .section__body {
+    text-align: center;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    width: 100%;
+
+    &:hover {
+      .product__photo {
+        box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+      }
+    }
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    transition: .3s;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 170px;
+    }
+
+    border: 1px solid #D3ABAC;
+  }
+
+  &__content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: $main-color;
+  }
+}
+
+// Download catalog
+
+.download__catalog {
+
+  border: 1px solid $main-color;
+  padding: 20px;
+  margin-top: 60px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &-icon {
+    .fa {
+      font-size: 30px;
+      color: $main-color;
+    }
+
+    margin-right: 20px;
+  }
+
+  &-text {
+    font-size: 20px;
+    color: $main-color;
+  }
+}
+
+// Personal work
+
+.personal-work {
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &:nth-child(2) {
+      .personal-work__photo {
+        order: 2;
+      }
+
+      .personal-work__content {
+        order: 1;
+      }
+    }
+
+  }
+
+  &__photo {
+    padding: 20px;
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    width: 100%;
+    max-width: 50%;
+    display: inline-flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-family: "Montserrat-Black", sans-serif;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .main-btn {
+    margin: auto;
+  }
+}
+
+.table-block {
+  margin-bottom: 30px;
+  table {
+
+    text-align: left;
+    th, td {
+      color: $main-color;
+      padding: 10px;
+    }
+
+    th {
+      color: #D3ABAC;
+    }
+
+  }
+}
+
+// Print
+
+.print {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__content {
+    flex: 0 0 1;
+    margin-right: 20px;
+  }
+
+  &__photo {
+    max-width: 800px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-family: "Montserrat-Bold",sans-serif;
+    margin-bottom: 36px;
+  }
+}
