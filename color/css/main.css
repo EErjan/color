@@ -608,7 +608,7 @@ ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px;
+  padding: 0;
 }
 
 .mobile-nav__inner {
@@ -2493,6 +2493,10 @@ body {
 
   .contacts__map {
     padding: 0;
+  }
+
+  .mobile-nav.show a {
+    font-size: 8vw;
   }
 }
 
