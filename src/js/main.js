@@ -17,11 +17,6 @@ try {
 })();
 
 
-// Mobile menu hover effect
-
-// Mobile menu end
-
-
 // AOS
 
 AOS.init();

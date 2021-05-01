@@ -12,6 +12,11 @@
   .main-btn {
     border-color: $main-color;
     color: $main-color;
+
+    &:hover {
+      color: $white;
+      background-color: $main-color;
+    }
   }
 
   background-color: $white;
@@ -85,6 +90,11 @@
   .main-btn {
     border-color: $main-color;
     color: $main-color;
+
+    &:hover {
+      background-color: $main-color;
+      color: $white;
+    }
   }
 
   .logo {
@@ -156,7 +166,7 @@
   transition: all 0ms 300ms;
 
   &::after {
-    height: 5px;
+    //height: 5px;
   }
 
   &.animate {
@@ -478,7 +488,7 @@ body {
       .category__item-title {
         transform: rotate(-90deg) translateX(+7%);
         top: 50%;
-        left: -100px;
+        left: -110px;
       }
 
       .category__item-photo {
@@ -496,7 +506,7 @@ body {
       .category__item-title {
         transform: rotate(+90deg) translateX(+7%);
         top: 50%;
-        right: -100px;
+        right: -110px;
       }
 
       .category__item-photo {
@@ -506,6 +516,8 @@ body {
     }
 
     &-title {
+      width: 300px;
+      overflow: hidden;
       position: absolute;
       text-align: center;
     }
@@ -610,10 +622,8 @@ body {
 
 // Portfolio
 .portfolio {
-
-
   $tile-width: 370px;
-  $tile-height: 200px;
+  $tile-height: 300px;
 
   &__wrap {
     display: grid;
@@ -820,8 +830,8 @@ body {
   &__body {
     display: none;
     margin-top: 20px;
-    background-color: #50006414;
     padding: 20px;
+    line-height: 1.6;
     -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
@@ -833,8 +843,10 @@ body {
 
     ul {
       li {
+        list-style-type: decimal;
         color: $main-color;
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 1.6;
         margin-bottom: 10px;
       }
     }
@@ -986,8 +998,10 @@ body {
       &:hover {
 
         box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
-
+        background-color: $main-color;
         .fa {
+          animation-delay: 0.3s;
+          color: $white;
           -webkit-animation: jello-horizontal 0.9s both;
           animation: jello-horizontal 0.9s both;
         }
@@ -1015,7 +1029,7 @@ body {
   &__text {
     font-size: 30px;
     line-height: normal;
-    color: #B1B1B1;
+    color: #B1B1B1!important;
   }
 }
 
@@ -1136,6 +1150,18 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: $main-color;
+
+    .fa {
+      color: $white;
+    }
+
+    .download__catalog-text {
+      color: $white;
+    }
+  }
 
   &-icon {
     .fa {
