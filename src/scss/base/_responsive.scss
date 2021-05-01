@@ -352,6 +352,23 @@
   .print__photo {
     max-width: 220px;
   }
+
+  .contacts__text {
+    max-width: 100%;
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .contacts__map {
+    max-width: 100%;
+    padding: 0 20px;
+    order: 2;
+  }
+
+  .contacts__body {
+    margin-bottom: 20px;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -493,6 +510,10 @@
 
   .print__photo {
     margin: 0 auto;
+  }
+
+  .contacts__map {
+    padding: 0;
   }
 
 

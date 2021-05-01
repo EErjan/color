@@ -1315,6 +1315,7 @@ body {
   }
 
   &__item {
+    display: flex;
     margin-bottom: 10px;
     font-size: 20px;
   }
@@ -1336,3 +1337,14 @@ body {
     }
   }
 }
+
+.contacts-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .footer {
+    margin-top: auto;
+  }
+}
+
