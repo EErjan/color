@@ -2042,6 +2042,14 @@ body {
   .price-list__wrap {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .category-bantik__content {
+    padding: 30px;
+  }
+
+  .print__photo {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2156,6 +2164,56 @@ body {
   .cta__icons-item {
     padding: 10px;
   }
+
+  .pink-bg .hero__banner-img {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .category-bantik__title {
+    font-size: 26px;
+    font-family: "Montserrat-Medium", sans-serif;
+  }
+
+  .product__wrap {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .personal-work__photo {
+    max-width: 30%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    height: 100%;
+  }
+
+  .personal-work__content {
+    max-width: 70%;
+  }
+
+  .personal-work__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .personal-work__title {
+    font-size: 32px;
+  }
+
+  .print__photo {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    height: 100%;
+    max-width: 360px;
+  }
+
+  .print {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2221,6 +2279,36 @@ body {
 
   .cta__text {
     font-size: 14px;
+  }
+
+  .category-bantik__title {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .product__wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .print__title {
+    font-size: 26px;
+  }
+
+  .personal-work__content {
+    max-width: 100%;
+  }
+
+  .personal-work__photo {
+    max-width: 100%;
+    padding: 0 30px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 30px;
+  }
+
+  .print__photo {
+    max-width: 220px;
   }
 }
 
@@ -2325,6 +2413,43 @@ body {
 
   .cta__text {
     margin-top: 20px;
+  }
+
+  .category-bantik__item {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .category-bantik__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-bantik__content {
+    padding: 20px 0;
+  }
+
+  .category-bantik__photo {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .product__wrap {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .print__content {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .print {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .print__photo {
+    margin: 0 auto;
   }
 }
 
