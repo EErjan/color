@@ -502,6 +502,10 @@ ul li {
   color: #500064;
 }
 
+.pink-bg .hero__banner-link {
+  color: #500064;
+}
+
 .hamburger-menu {
   position: relative;
   cursor: pointer;
