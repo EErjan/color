@@ -748,7 +748,8 @@ body {
 .hero__banner-heading {
   max-width: 600px;
   font-size: 70px;
-  font-family: "Monsterrat-Regular", sans-serif;
+  font-family: "Monsterrat-Bold", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
