@@ -748,8 +748,7 @@ body {
 .hero__banner-heading {
   max-width: 600px;
   font-size: 70px;
-  font-family: "Monsterrat-Bold", sans-serif;
-  font-weight: 700;
+  font-family: "Monsterrat-Regular", sans-serif;
   text-transform: uppercase;
 }
 
@@ -994,6 +993,32 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1;
           flex: 0 0 1;
+}
+
+.photosession__slider .owl-nav {
+  display: block !important;
+}
+
+.photosession__slider .owl-nav span {
+  font-size: 100px;
+}
+
+.photosession__slider .owl-prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+          transform: translateY(-55%);
+  left: -70px;
+}
+
+.photosession__slider .owl-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+          transform: translateY(-55%);
+  right: -70px;
 }
 
 .photosession__slider-item {
@@ -1253,8 +1278,8 @@ body {
 }
 
 .accordion__body p {
-  font-size: 16px;
-  line-height: normal;
+  font-size: 20px;
+  line-height: 1.6;
   color: #500064;
 }
 
@@ -1452,11 +1477,7 @@ body {
 }
 
 .cta__icons-item:hover .fa {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
   color: #fff;
-  -webkit-animation: jello-horizontal 0.9s both;
-  animation: jello-horizontal 0.9s both;
 }
 
 .cta__icons-item:last-child {
@@ -2071,6 +2092,18 @@ body {
   .print__photo {
     max-width: 500px;
   }
+
+  .photosession__slider {
+    padding: 0 30px;
+  }
+
+  .photosession__slider .owl-prev {
+    left: -20px;
+  }
+
+  .photosession__slider .owl-next {
+    right: -20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2348,6 +2381,18 @@ body {
 
   .contacts__body {
     margin-bottom: 20px;
+  }
+
+  .photosession__slider {
+    padding: 0 50px;
+  }
+
+  .photosession__slider .owl-prev {
+    left: 0px;
+  }
+
+  .photosession__slider .owl-next {
+    right: 0px;
   }
 }
 

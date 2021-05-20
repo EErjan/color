@@ -342,8 +342,8 @@ body {
     &-heading {
       max-width: 600px;
       font-size: 70px;
-      font-family: "Monsterrat-Bold", sans-serif;
-      font-weight: 700;
+      font-family: "Monsterrat-Regular", sans-serif;
+      //font-weight: 700;
       text-transform: uppercase;
     }
 
@@ -579,6 +579,29 @@ body {
 
 .photosession {
   &__slider {
+
+    .owl-nav {
+      display: block!important;
+
+      span {
+        font-size: 100px;
+      }
+    }
+
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-55%);
+      left: -70px;
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-55%);
+      right: -70px;
+    }
+
     &-item {
       padding: 40px;
       border: 1px solid white;
@@ -833,8 +856,8 @@ body {
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
     p {
-      font-size: 16px;
-      line-height: normal;
+      font-size: 20px;
+      line-height: 1.6;
       color: $main-color;
     }
 
@@ -997,10 +1020,10 @@ body {
         box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
         background-color: $main-color;
         .fa {
-          animation-delay: 0.3s;
+          //animation-delay: 0.3s;
           color: $white;
-          -webkit-animation: jello-horizontal 0.9s both;
-          animation: jello-horizontal 0.9s both;
+          //-webkit-animation: jello-horizontal 0.9s both;
+          //animation: jello-horizontal 0.9s both;
         }
       }
 

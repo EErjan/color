@@ -100,6 +100,24 @@
     max-width: 500px;
   }
 
+  .photosession__slider {
+    padding: 0 30px;
+
+    .owl-nav {
+      span {
+
+      }
+    }
+
+    .owl-prev {
+      left: -20px;
+    }
+
+    .owl-next {
+      right: -20px;
+    }
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -367,6 +385,24 @@
 
   .contacts__body {
     margin-bottom: 20px;
+  }
+
+  .photosession__slider {
+    padding: 0 50px;
+
+    .owl-nav {
+      span {
+
+      }
+    }
+
+    .owl-prev {
+      left: 0px;
+    }
+
+    .owl-next {
+      right: 0px;
+    }
   }
 
 }
